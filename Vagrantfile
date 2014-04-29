@@ -7,6 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "trusty64"
+  config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
  
   config.vm.provision "shell" do |s|
     s.path = "dcpromo-repo.sh"
