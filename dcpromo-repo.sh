@@ -7,5 +7,5 @@ dpkg-reconfigure locales
 
 add-apt-repository ppa:niklas-andersson/dcpromo
 apt-get update
-debconf-set-selections dcpromo.debconf
+debconf-set-selections /vagrant/dcpromo.debconf
 apt-get install dcpromo
